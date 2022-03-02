@@ -28,16 +28,19 @@ public class ConsoleExercises {
 //        System.out.printf("You entered: %s.\n", aSentence);
 
         System.out.print("Enter the length your room: ");
-        String stringLength = scanner.nextLine();
+        double length = scanner.nextDouble();
         System.out.print("Enter the width of your room: ");
-        String stringWidth = scanner.nextLine();
+        double width = scanner.nextDouble();
+        System.out.print("Enter the height of your room: ");
+        double height = scanner.nextDouble();
 
-        double length = Double.parseDouble(stringLength);
-        double width = Double.parseDouble(stringWidth);
         double area = length * width;
+        double volume = area * height;
         double perimeter = length * 2 + width * 2;
 
-        System.out.printf("The area of your room is: %.2f sq. ft.\nThe perimeter of your room is: %.2f\n", area, perimeter);
+        System.out.printf("The area of your room is: %.2f.\n" +
+                "The perimeter of your room is: %.2f.\n" +
+                "The volume of your room is: %.2f.\n", area, perimeter, volume);
 
         scanner.close();
     }
