@@ -10,18 +10,18 @@ public class ControlFlowExercises {
 //            i++;
 //        }
 
-//        int i = 100;
-//        do {
-//            System.out.println(i);
-//            i -= 5;
-//        } while (i >= -10);
+//        for (int j = 100; j >= -10; j--) {
+//            if (j % 5 == 0) {
+//                System.out.println(j);
+//            }
+//        }
 
-        long i = 2;
-        do {
-            System.out.println(i);
-            i *= i;
-        } while (i < 1000000);
-
-
+        for (long k = 2; k < 1000000; k++) {
+            System.out.println(k);
+            k *= k;
+            k--;
     }
+
+
+}
 }
