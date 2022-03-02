@@ -10,11 +10,17 @@ public class ControlFlowExercises {
 //            i++;
 //        }
 
-        int i = 100;
+//        int i = 100;
+//        do {
+//            System.out.println(i);
+//            i -= 5;
+//        } while (i >= -10);
+
+        long i = 2;
         do {
             System.out.println(i);
-            i -= 5;
-        } while (i >= -10);
+            i *= i;
+        } while (i < 1000000);
 
 
     }
