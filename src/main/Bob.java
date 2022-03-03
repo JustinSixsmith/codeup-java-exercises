@@ -8,7 +8,7 @@ public class Bob {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Yeah? ");
-        String saidToBob = scanner.nextLine();
+        String saidToBob = scanner.nextLine().trim();
 
         boolean more = true;
 
@@ -23,8 +23,8 @@ public class Bob {
                 System.out.println("Whatever.");
             }
 
-            System.out.println("Is that it (y)? ");
-            saidToBob = scanner.nextLine();
+            System.out.println("Is that it (y/reply)? ");
+            saidToBob = scanner.nextLine().trim();
 
             if (saidToBob.equalsIgnoreCase("y")) {
                 more = false;
