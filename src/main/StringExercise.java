@@ -10,6 +10,9 @@ public class StringExercise {
         String escapeQuotes = "Check \"this\" out!, \"s inside of \"s!";
         System.out.println(escapeQuotes);
 
+        String cDrive = "In windows, the main drive is usually C:\\";
+        System.out.println(cDrive);
+
         String escapeBackslash = "I can do backslashes \\, double backslashes \\\\,\n" +
                 "and the amazing triple backslash \\\\\\!";
         System.out.println(escapeBackslash);
