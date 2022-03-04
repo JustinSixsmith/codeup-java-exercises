@@ -104,7 +104,7 @@ public class MethodsExercises {
 //        for (int i = 1; i <= userInput; i++) {
 //            factor *= i;
 //        }
-//        System.out.printf("the factorial of %d is: %d\n", userInput, factor);
+//        System.out.printf("%d! is: %d\n", userInput, factor);
 //    }
 
 
