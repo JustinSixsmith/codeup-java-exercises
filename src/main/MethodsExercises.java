@@ -12,21 +12,35 @@ public class MethodsExercises {
 //        System.out.println(divNums(5, 7));
 //        System.out.println(modNums(5, 3));
 
-//        int userInput = getInteger(1, 10);
+//        int userInput = getInteger(1, 20);
 //        System.out.println("You entered: " + userInput);
 
         Scanner scanner = new Scanner(System.in);
-        boolean userResponse = true;
+
+        boolean userContinues = true;
+
+//        do {
+//            factorial();
+//            System.out.println("Would you like to continue (y/n)? ");
+//            String userReply = scanner.next();
+//            if (!(userReply.equalsIgnoreCase("y"))) {
+//                userContinues = false;
+//                System.out.println("Factorials complete.");
+//            }
+//        } while (userContinues);
+
 
         do {
-            factorial();
-            System.out.println("Would you like to continue (y/n)? ");
+            int diceRoll = rollDice(2);
+            System.out.printf("Your total is: %d!\n", diceRoll);
+            System.out.println("Would you like to roll again (y/n)? ");
             String userReply = scanner.next();
-            if (!(userReply.equals("y"))) {
-                userResponse = false;
-                System.out.println("Number factorials complete.");
+            if (!(userReply.equalsIgnoreCase("y"))) {
+                userContinues = false;
+                System.out.println("Game time is over!");
             }
-        } while (userResponse);
+        } while (userContinues);
+
 
         scanner.close();
     }
@@ -72,25 +86,37 @@ public class MethodsExercises {
 //    }
 
 
-    public static int getInteger(int min, int max) {
+//    public static int getInteger(int min, int max) {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.print("Please enter a number between 1 and 20: ");
+//        int userNum = scanner.nextInt();
+//        if (userNum >= 1 && userNum <= 20) {
+//            System.out.print("Thank you, ");
+//            return userNum;
+//        }
+//        return getInteger(min, max);
+//    }
+//
+//
+//    public static void factorial() {
+//        int userInput = getInteger(1, 20);
+//        long factor = 1;
+//        for (int i = 1; i <= userInput; i++) {
+//            factor *= i;
+//        }
+//        System.out.printf("the factorial of %d is: %d\n", userInput, factor);
+//    }
+
+
+    public static int rollDice(int numDice) {
+        System.out.println("How many sides to the pair of dice? ");
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Please enter a number between 1 and 10: ");
-        int userNum = scanner.nextInt();
-        if (userNum >= 1 && userNum <= 10) {
-            System.out.print("Thank you, ");
-            return userNum;
-        }
-        return getInteger(min, max);
-    }
-
-
-    public static void factorial() {
-        int userInput = getInteger(1, 10);
-        long factor = 1;
-        for (int i = 1; i <= userInput; i++) {
-            factor *= i;
-        }
-        System.out.printf("the factorial of %d is: %d\n", userInput, factor);
+        int sides = scanner.nextInt();
+        int die1 = (int) Math.floor(Math.random() * sides + 1);
+        int die2 = (int) Math.floor(Math.random() * sides + 1);
+        System.out.println("Your first die rolled a: " + die1);
+        System.out.println("Your second die rolled a: " + die2);
+        return die1 + die2;
     }
 
 
