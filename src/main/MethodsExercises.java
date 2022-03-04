@@ -12,14 +12,23 @@ public class MethodsExercises {
 //        System.out.println(divNums(5, 7));
 //        System.out.println(modNums(5, 3));
 
-        int userInput = getInteger(1, 10);
-        System.out.println("You entered: " + userInput);
+//        int userInput = getInteger(1, 10);
+//        System.out.println("You entered: " + userInput);
 
-        System.out.println(factorial());
+        Scanner scanner = new Scanner(System.in);
+        boolean userResponse = true;
 
+        do {
+            factorial();
+            System.out.println("Would you like to continue (y/n)? ");
+            String userReply = scanner.next();
+            if (!(userReply.equals("y"))) {
+                userResponse = false;
+                System.out.println("Number factorials complete.");
+            }
+        } while (userResponse);
 
-
-
+        scanner.close();
     }
 
 
@@ -65,23 +74,23 @@ public class MethodsExercises {
 
     public static int getInteger(int min, int max) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a number between 1 and 10: ");
+        System.out.print("Please enter a number between 1 and 10: ");
         int userNum = scanner.nextInt();
         if (userNum >= 1 && userNum <= 10) {
-            System.out.println("Thank you.");
+            System.out.print("Thank you, ");
             return userNum;
         }
         return getInteger(min, max);
     }
 
 
-    public static int factorial() {
+    public static void factorial() {
         int userInput = getInteger(1, 10);
         long factor = 1;
-        for (int i = 0; i < userInput; i++) {
-            factor = factor * i;
+        for (int i = 1; i <= userInput; i++) {
+            factor *= i;
         }
-        return userInput;
+        System.out.printf("the factorial of %d is: %d\n", userInput, factor);
     }
 
 
