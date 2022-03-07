@@ -12,7 +12,12 @@ public class InputTest {
 //
 //        System.out.println(input.getInt("Enter a number between 1 to 10: ", 1, 10));
 
-        System.out.println(input.getInt("Enter an int: "));
+//        System.out.println(input.getInt("Enter an int: "));
+
+        System.out.println(input.getDouble("Enter a decimal number between 1 to 10: ", 1, 10));
+
+        System.out.println(input.getDouble("Enter an decimal number: "));
+
 
     }
 }

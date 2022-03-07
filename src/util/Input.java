@@ -31,29 +31,29 @@ public class Input {
 
     public int getInt(String prompt) {
         System.out.println(prompt);
-        if (scanner.hasNextInt() == false) {
+        if (!scanner.hasNextInt()) {
             scanner.nextLine();
             return getInt(prompt);
         }
         return scanner.nextInt();
     }
 
-    public double getDouble(double min, double max) {
-        System.out.println("Enter a decimal number between 1 and 10: ");
-        double userDbl = scanner.nextInt();
+    public double getDouble(String prompt, double min, double max) {
+        System.out.println(prompt);
+        double userDbl = scanner.nextDouble();
         if (!(userDbl >= 1 && userDbl <= 10)) {
-            getDouble(min, max);
+            return getDouble(prompt, min, max);
         }
         return userDbl;
     }
 
     public double getDouble(String prompt) {
         System.out.println(prompt);
-        if (scanner.hasNextDouble() == false) {
+        if (!scanner.hasNextDouble()) {
             scanner.nextLine();
-            return getInt(prompt);
+            return getDouble(prompt);
         }
-        return scanner.nextInt();
+        return scanner.nextDouble();
     }
 
 
