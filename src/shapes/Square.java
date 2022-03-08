@@ -16,12 +16,12 @@ public class Square extends Rectangle {
 
     @Override
     public double getArea() {
-        return this.side * this.side;
+        return this.length * this.width;
     }
 
     @Override
     public double getPerimeter() {
-        return 4 * this.side;
+        return 4 * this.length;
     }
 
 }
