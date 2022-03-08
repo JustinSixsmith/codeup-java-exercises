@@ -8,7 +8,7 @@ public class CircleApp {
         Input input = new Input();
 
         while (true) {
-            doACircle();
+            doACircle(input);
 
             boolean moreCircles = input.yesNo("More circles (y/n)? ");
             if (!moreCircles) {

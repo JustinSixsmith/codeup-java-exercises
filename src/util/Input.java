@@ -14,7 +14,7 @@ public class Input {
         return scanner.nextLine();
     }
 
-    public boolean yesNo() {
+    public boolean yesNo(String prompt) {
         String reply = scanner.nextLine().toLowerCase();
         return reply.startsWith("y");
     }
