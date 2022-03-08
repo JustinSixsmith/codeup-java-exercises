@@ -16,6 +16,7 @@ public class CircleApp {
             }
         }
 
+        System.out.println("Number of circles created: " + Circle.getNumCircles());
 
         input.close();
     }
