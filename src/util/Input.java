@@ -56,5 +56,7 @@ public class Input {
         return scanner.nextDouble();
     }
 
-
+public void close() {
+        scanner.close();
+}
 }

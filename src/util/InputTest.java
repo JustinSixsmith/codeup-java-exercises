@@ -18,6 +18,6 @@ public class InputTest {
 
         System.out.println(input.getDouble("Enter a decimal number: "));
 
-
+        input.close();
     }
 }
