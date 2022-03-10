@@ -22,7 +22,7 @@ public class Input {
     public int getInt(String prompt, int min, int max) {
         System.out.println(prompt);
         int userInt = scanner.nextInt();
-        if (!(userInt >= 1 && userInt <= 10)) {
+        if (!(userInt >= min && userInt <= max)) {
             return getInt(prompt, min, max);
         }
         return userInt;
