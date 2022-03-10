@@ -14,8 +14,11 @@ public class ArraysExercises {
             family[i] = new Person("unknown");
         }
         family[0].setName("Justin");
+        Person dad = family[0];
         family[1].setName("Joanna");
+        Person mom = family[1];
         family[2].setName("Charlotte");
+        Person daughter = family [2];
         for (int i = 0; i < family.length; i++) {
             System.out.println(family[i].getName());
         }
