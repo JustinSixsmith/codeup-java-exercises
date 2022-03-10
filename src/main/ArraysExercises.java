@@ -9,19 +9,27 @@ public class ArraysExercises {
         System.out.println(Arrays.toString(numbers));
 
 
-        Person[] family = new Person[3];
-        family[0] = new Person("Justin");
-        family[1] = new Person("Joanna");
-        family[2] = new Person("Charlotte");
+        Person[] family = new Person[4];
+        for (int i = 0; i < family.length; i++) {
+            family[i] = new Person("unknown");
+        }
+        family[0].setName("Justin");
+        family[1].setName("Joanna");
+        family[2].setName("Charlotte");
         for (int i = 0; i < family.length; i++) {
             System.out.println(family[i].getName());
         }
 
-        addPerson(family);
+        Person son = new Person("Nolan");
+        addPerson(family, son);
 
     }
 
-    public static void addPerson(Person[] family) {
-        System.out.println(family[0].getName());
+    public static void addPerson(Person[] people, Person person) {
+        String newName = person.getName();
+        people[people.length - 1].setName(newName);
+        for (int i = 0; i < people.length; i++) {
+            System.out.println(people[i].getName());
+        }
     }
 }
