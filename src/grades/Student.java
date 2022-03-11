@@ -11,14 +11,18 @@ public class Student {
         this.grades = new ArrayList<>();
     }
 
-    @Override
-    public String toString() {
-        return getName() + " - " + "Grade average: " + getGradeAverage();
-    }
+//    @Override
+//    public String toString() {
+//        return getName() + " - " + "Grade average: " + getGradeAverage();
+//    }
 
     // returns the student's name
     public String getName() {
         return this.name;
+    }
+
+    public ArrayList<Integer> getGrades() {
+        return grades;
     }
 
     // adds the given grade to the grades property
@@ -38,8 +42,8 @@ public class Student {
 
     public static void main(String[] args) {
         Student bob = new Student("Bob");
-        System.out.println(bob);
+        System.out.println(bob.getName());
         bob.addGrade(98);
-        System.out.println(bob);
+        System.out.println(bob.getGradeAverage());
     }
 }
