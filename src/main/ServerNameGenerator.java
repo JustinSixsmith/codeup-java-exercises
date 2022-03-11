@@ -3,8 +3,8 @@ package main;
 public class ServerNameGenerator {
     public static void main(String[] args) {
 
-        String[] adjectives = {"delirious", "hospitable", "vengeful", "fierce", "fretful", "hard", "husky", "entertaining", "cynical", "juicy", "freezing", "guiltless"};
-        String[] nouns = {"ladder", "television", "assistant", "obligation", "chapter", "construction", "orange", "assistance", "combination", "history"};
+        String [] adjectives = {"delirious", "hospitable", "vengeful", "fierce", "fretful", "hard", "husky", "entertaining", "cynical", "juicy", "freezing", "guiltless"};
+        String [] nouns = {"ladder", "television", "assistant", "obligation", "chapter", "construction", "orange", "assistance", "combination", "history"};
 
         String randomAdj = getElement(adjectives);
         String randomNoun = getElement(nouns);
@@ -13,8 +13,8 @@ public class ServerNameGenerator {
 
 
 
-    public static String getElement(String[] elements) {
-        return elements[(int) Math.floor(Math.random() * elements.length)];
+    public static String getElement(String[] strArray) {
+        return strArray[(int) Math.floor(Math.random() * strArray.length)];
     }
 }
 
