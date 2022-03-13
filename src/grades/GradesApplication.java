@@ -43,8 +43,8 @@ public class GradesApplication {
             String userInput = input.getString("Which student would you like to see more information on? (Or, type \"all\" to see a list of all grades.) ");
 
             if (userInput.trim().equalsIgnoreCase("all")) {
-                System.out.println(students);
-            } else if (!students.containsKey("Working on it...")) {
+                System.out.println("Working on it...\n");
+            } else if (!students.containsKey(userInput)) {
                 System.out.printf("\nSorry, no student found with the GitHub username of \"%s\".\n", userInput);
                 System.out.println();
             } else {
