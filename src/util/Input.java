@@ -10,7 +10,7 @@ public class Input {
     }
 
     public String getString(String prompt) {
-        System.out.println(prompt);
+        System.out.print(prompt + " ");
         return scanner.nextLine();
     }
 
@@ -32,7 +32,7 @@ public class Input {
 
 
     public int getInt(String prompt) {
-        System.out.println(prompt);
+        System.out.print(prompt + " ");
         if (!scanner.hasNextInt()) {
             scanner.nextLine();
             return getInt(prompt);
