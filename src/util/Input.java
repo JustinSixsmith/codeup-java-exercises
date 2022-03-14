@@ -25,7 +25,9 @@ public class Input {
         if (!(userInt >= min && userInt <= max)) {
             return getInt(prompt, min, max);
         }
-        return userInt;
+        int myInt = userInt;
+        scanner.nextLine();
+        return myInt;
     }
 
 
@@ -35,7 +37,9 @@ public class Input {
             scanner.nextLine();
             return getInt(prompt);
         }
-        return scanner.nextInt();
+        int myInt = scanner.nextInt();
+        scanner.nextLine();
+        return myInt;
     }
 
     public double getDouble(String prompt, double min, double max) {
@@ -44,7 +48,9 @@ public class Input {
         if (!(userDbl >= 1 && userDbl <= 10)) {
             return getDouble(prompt, min, max);
         }
-        return userDbl;
+        double myDbl = userDbl;
+        scanner.nextLine();
+        return myDbl;
     }
 
     public double getDouble(String prompt) {
@@ -53,7 +59,9 @@ public class Input {
             scanner.nextLine();
             return getDouble(prompt);
         }
-        return scanner.nextDouble();
+        double myDbl = scanner.nextDouble();
+        scanner.nextLine();
+        return myDbl;
     }
 
     public void close() {
