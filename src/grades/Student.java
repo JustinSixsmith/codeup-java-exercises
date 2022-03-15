@@ -60,11 +60,6 @@ public class Student {
     }
 
 //    public Set attendancePercentage() {
-//        Set records = this.attendance.keySet();
-//        String day;
-//        for (day : records) {
-//            System.out.println(day);
-//        }
 //    }
 
     public static void main(String[] args) {

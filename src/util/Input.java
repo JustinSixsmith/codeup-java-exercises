@@ -3,7 +3,7 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private Scanner scanner;
+    private static Scanner scanner;
 
     public Input() {
         scanner = new Scanner(System.in);
@@ -30,16 +30,15 @@ public class Input {
         return myInt;
     }
 
-
     public int getInt(String prompt) {
-        System.out.print(prompt + " ");
-        if (!scanner.hasNextInt()) {
-            scanner.nextLine();
-            return getInt(prompt);
+        while (true) {
+            try {
+                String aString = getString(prompt);
+                return Integer.valueOf(aString);
+            } catch (NumberFormatException e) {
+                System.out.println("Please try again.");
+            }
         }
-        int myInt = scanner.nextInt();
-        scanner.nextLine();
-        return myInt;
     }
 
     public double getDouble(String prompt, double min, double max) {
@@ -54,17 +53,21 @@ public class Input {
     }
 
     public double getDouble(String prompt) {
-        System.out.println(prompt);
-        if (!scanner.hasNextDouble()) {
-            scanner.nextLine();
-            return getDouble(prompt);
+        while (true) {
+            try {
+                String aString = getString(prompt);
+                return Double.valueOf(aString);
+            } catch (NumberFormatException e) {
+                System.out.println("Please try again.");
+            }
         }
-        double myDbl = scanner.nextDouble();
-        scanner.nextLine();
-        return myDbl;
     }
 
     public void close() {
         scanner.close();
+    }
+
+    public static void main(String[] args) {
+
     }
 }
