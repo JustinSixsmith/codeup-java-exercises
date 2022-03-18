@@ -3,9 +3,6 @@ package groceries;
 import util.Input;
 
 public class GroceryListApp {
-
-
-
     public static Input input = new Input();
     public static void main(String[] args) {
         String makeAList = input.getString("Would you like to create a grocery list? (y/n): ");
