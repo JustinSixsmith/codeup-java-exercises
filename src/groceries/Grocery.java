@@ -7,4 +7,9 @@ public class Grocery {
         this.name = name;
         this.category = category;
     }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }
