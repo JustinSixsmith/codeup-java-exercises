@@ -1,4 +1,4 @@
-package Warmup;
+package warmup;
 
 public class CreatePhone {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Warmup;
+package warmup;
 
 public class Phone {
     private String brand;
